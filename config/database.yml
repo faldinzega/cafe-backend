@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  username: postgres
+  password: 233303030324
+  pool: 5
+
+development:
+  <<: *default
+  database: cafe_development
+
+test:
+  <<: *default
+  database: cafe_test
+
+production:
+  <<: *default
+  database: cafe_production
+  username: postgres
+  password: 233303030324
